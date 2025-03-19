@@ -5,7 +5,7 @@ var cors=require('cors');
 ConnectToMongo();
 const app = express()
 const port = 5000
-app.use(cors()) 
+app.use(cors({ origin: 'https://accutax-blush.vercel.app' })) 
 app.use(express.json())
 app.use("/files",express.static("files"));
 
